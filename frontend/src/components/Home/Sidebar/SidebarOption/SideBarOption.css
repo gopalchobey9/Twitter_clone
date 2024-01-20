@@ -1,0 +1,9 @@
+.option{
+    gap: 1rem;
+    margin: 2rem;
+    align-items: flex-start;
+}
+/* .option{
+    background-color: red;
+    max-width: 10rem;
+} */

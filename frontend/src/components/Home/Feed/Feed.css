@@ -1,0 +1,13 @@
+.feed-head{
+    display: flex;
+
+    gap: 3rem;
+}
+.feed-head > div{
+    font-size: 2rem;
+    border: 1.5px solid black;
+
+}
+.feed-post{
+    border: 1.5px solid black;
+}

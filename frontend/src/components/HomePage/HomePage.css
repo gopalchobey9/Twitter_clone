@@ -1,0 +1,30 @@
+.Login-MainDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    border: 2px  black solid;
+    /* height: 100vh; */
+    width: 40rem;
+    margin: auto; /* Center the div horizontally */
+    margin-top: 10vh; /* Adjust the top margin if needed */
+    margin-bottom: 10vh;
+    padding: 2.5rem;
+
+}
+button{
+    width: 10rem;
+    border-radius: 0.5rem;
+}
+input{
+    width: 10rem;
+    border: 2px solid black;
+    height: 2.5rem;
+
+}
+hr{
+    color: black;
+    width: 10rem;
+    border: 2px solid black;
+}
