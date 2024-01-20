@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import SidebarOption from './SidebarOption/SidebarOption'
 import "./Sidebar.css"
+import { AppContext } from '../../../context/AppContext'
+
+
 
 const Sidebar = () => {
+  const {userDetails} = useContext(AppContext);
   return (
     <div>
+     <span>
+      Name:  {userDetails}
+      </span>
       <SidebarOption name={"Home"}/>
       <SidebarOption name={"Explore"}/>
       <SidebarOption name={"Notification"}/>
@@ -12,7 +19,7 @@ const Sidebar = () => {
       <SidebarOption name={"Grok"}/>
       <SidebarOption name={"Premium"}/>
       <SidebarOption name={"Lists"}/>
-      <SidebarOption name={"Profile"}/>
+      <SidebarOption name={"kuch bhi"}/>
       <SidebarOption name={"More"}/>
       <button>Post</button>
     </div>

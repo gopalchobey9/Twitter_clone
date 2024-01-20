@@ -6,7 +6,7 @@ import Widget from './Widget/Widget'
 import "./Home.css"
 
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div className='home'>
             <div><Sidebar/></div>

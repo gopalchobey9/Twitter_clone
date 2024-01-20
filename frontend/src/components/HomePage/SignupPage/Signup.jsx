@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import "./Signup.css"
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const Signup = () => {
 
@@ -19,7 +20,7 @@ const Signup = () => {
   //   });
   //   console.log('submit')
   // }
-
+  let navigate = useNavigate();
   const emailRef =useRef();
   const usernameRef =useRef();
   const passwordRef =useRef();
@@ -28,9 +29,14 @@ const Signup = () => {
     const email=emailRef.current.value;
     const username=usernameRef.current.value;
     const password=passwordRef.current.value;
-    await axios.post("http://localhost:8080/signup",{email:email,username:username,password:password})
+    const response = await axios.post("http://localhost:8080/signup",{email:email,username:username,password:password})
 
-
+    if (response.data) {
+        navigate('/'); 
+      } 
+      else {
+        console.error(response.data.message);
+      }
   }
   return (
     <div className='form-div'>

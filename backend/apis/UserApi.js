@@ -2,23 +2,29 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const User = require('../models/User');
+const passport = require('passport');
 
 const router = express.Router();
 
 // User authentication route
 router.post('/signup',  async (req, res) => {
-    // Handle user authentication logic here
-    // ...
-    // console.log(req.body);
-    const {email,username,password}=req.body;
-    console.log(username);
-    let newUser = new User({email,username})
-    await User.register(newUser,password);
-    res.redirect('/');
+    try {
+        const { email, username, password } = req.body;
+        let newUser = new User({ email, username });
+        await User.register(newUser, password);
+        res.status(200).json({ success: true, message: 'Signup successful' });
+      } catch (error) {
+        console.error('Error during signup:', error);
+        res.status(500).json({ success: false, message: 'Signup failed' });
+      }
 });
-router.get('/login', (req, res) => {
-    res.send('Welcome')
+router.get('/home', (req, res) => {
+
 })
 
+router.post('/login', passport.authenticate('local', { 
+}), (req, res)=> {
+    res.status(200).json({ success: true, message: 'Login successful' ,user:req.user});
+});
 // Export the router
 module.exports = router;

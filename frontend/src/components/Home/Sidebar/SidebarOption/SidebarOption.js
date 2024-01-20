@@ -7,7 +7,6 @@ const SidebarOption = (props) => {
     <div className='option'>
         <img src={url} alt="" />
         {name}
-
     </div>
   )
 }
