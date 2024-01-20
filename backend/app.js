@@ -16,8 +16,8 @@ let configSession ={
     saveUninitialized: true,
     cookie: { 
        httpOnly: true,
-    // expires :Date.now()+ 24*7*60*60*1000,
-    //    maxAge:24*7*60*60*1000
+    expires :Date.now()+ 24*7*60*60*1000,
+       maxAge:24*7*60*60*1000
              }
     } 
 

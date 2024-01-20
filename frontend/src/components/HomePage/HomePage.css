@@ -28,3 +28,8 @@ hr{
     width: 10rem;
     border: 2px solid black;
 }
+.form-c{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

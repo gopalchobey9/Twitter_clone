@@ -7,7 +7,7 @@ import { AppContext } from '../../context/AppContext'
 
 const HomePage = () => {
   let {userDetails,updateUserDetails}=useContext(AppContext);
-  
+
   let navigate = useNavigate();
   const userRef= useRef();
   const passwordRef =useRef();
@@ -47,11 +47,12 @@ const HomePage = () => {
       <button>Sign in with Apple</button>
       <hr />
       {/* <br /> */}
-     <form onSubmit={loginInfoHandler} >
+     <form onSubmit={loginInfoHandler} className='form-c' >
      <input type="text" placeholder='enter your email adress' name='username' id='username' ref={userRef} />
       <input type="text" placeholder='password' name='password' is='password' ref={passwordRef} />
-      <button>Signup</button>
+      <button>Login</button>
      </form>
+     <span>Or</span>
      <button onClick={homePageHandler}> next</button>
       <button>Forgot Password</button>
       <span>dont have account <Link to='/signup' >Signup</Link></span>
