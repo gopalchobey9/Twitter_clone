@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import "./HomePage.css"
 import { Link, useNavigate } from 'react-router-dom'
 import axios from "axios"
@@ -29,8 +29,11 @@ const HomePage = () => {
      
       if (response.data) {
         console.log(response.data.user.username);
+        
         updateUserDetails(response.data.user.username)
-        navigate('/home'); 
+        navigate('/home');
+        
+        
       } 
       else {
         console.error(response.data.message);
