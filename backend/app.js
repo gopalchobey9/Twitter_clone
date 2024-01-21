@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const User = require('./models/User');
 const UserApi =require("./apis/UserApi");
+const PostApi =require("./apis/PostApi");
 const app = express();
 const cors = require('cors');
 const session =require("express-session");
@@ -41,6 +42,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.use(UserApi);
+app.use(PostApi)
 
 app.get('/', (req,res)=>{
     res.send('Hello World');
