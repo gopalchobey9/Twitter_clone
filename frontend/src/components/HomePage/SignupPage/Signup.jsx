@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import "./Signup.css"
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Signup = () => {
 
@@ -55,6 +55,9 @@ const Signup = () => {
           </div>
           <button className='signup-btn'>submit</button>
         </form>
+        <hr />
+        <br />
+        <span>Already have account <Link to='/'>Signin</Link></span>
     </div>
   )
 }
