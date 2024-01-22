@@ -53,7 +53,7 @@ const HomePage = () => {
       {/* <br /> */}
      <div className='signin-section'>
      <form onSubmit={loginInfoHandler} className='signin-form' >
-     <input type="text" placeholder='enter your email adress' name='username' id='username' ref={userRef} />
+     <input type="text" placeholder='username' name='username' id='username' ref={userRef} />
       <input type="text" placeholder='password' name='password' is='password' ref={passwordRef} />
       <button className='signin-button'>Login</button>
      </form>

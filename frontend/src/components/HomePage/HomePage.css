@@ -40,12 +40,12 @@
     /* height: 100vh; */
     background-color: #ffffff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 2.8);
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px;
     
     margin: auto; /* Add this line to center the homepage div */
     
-    width: 50%;
+    width: 40%;
     margin-top: 20px;
 }
     /* margin-top: 20px; */

@@ -20,13 +20,14 @@ const Posts = () => {
        { 
        postdata.map((data,index)=>{
         return(
-         <>
-         <hr />
-         <div key={index} className='post-content' >
+        
+         <div 
+         key={index}
+          className='post-content' >
             <h3>{data.textData}</h3>
             {/* <p>{data.date}</p> */}
           </div>
-         </>
+      
         )
        })
        }
