@@ -1,14 +1,36 @@
-.form-div{
-    display: flex;
-    gap: 2rem;
-    margin: 4rem;
+/* FILEPATH: /d:/Twitter_clone/frontend/src/components/HomePage/SignupPage/Signup.css */
 
+/* Container for the signup form */
+.signup-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
 }
-.form-div >form> div{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+
+/* Form inputs */
+.signup-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
-.signup-btn{
-    margin: 1.5rem 0 0 0 ;
+
+/* Submit button */
+.signup-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Error message */
+.signup-container .error-message {
+    color: red;
+    margin-bottom: 10px;
 }

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect,useState } from 'react'
+import "./Post.css"
 
 const Posts = () => {
   const [postdata,setPostdata] = useState([])
@@ -14,14 +15,14 @@ const Posts = () => {
   }
 
   return (
-    <h2>Here  Are all the Posts
-      <div>
+    <h2 className='post-title'>Here  Are all the Posts
+      <div className='all-posts'>
        { 
        postdata.map((data,index)=>{
         return(
          <>
          <hr />
-         <div key={index} >
+         <div key={index} className='post-content' >
             <h3>{data.textData}</h3>
             {/* <p>{data.date}</p> */}
           </div>

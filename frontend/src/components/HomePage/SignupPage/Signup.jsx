@@ -39,7 +39,7 @@ const Signup = () => {
       }
   }
   return (
-    <div className='form-div'>
+    <div className='signup-container'>
         <form onSubmit={submitHandler}>
           <div>
           <label htmlFor="email">Email : </label>

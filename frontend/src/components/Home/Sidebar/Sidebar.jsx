@@ -8,7 +8,7 @@ import { AppContext } from '../../../context/AppContext'
 const Sidebar = () => {
   const {userDetails} = useContext(AppContext);
   return (
-    <div>
+    <div className='sidebar'>
      <span>
       Name:  {userDetails}
       </span>

@@ -1,0 +1,33 @@
+.PostPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.PostPage textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #070707;
+    border-radius: 5px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.PostPage button {
+    background-color: #1da1f2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.PostPage button:hover {
+    background-color: #0c87c6;
+}
+
+.PostPage button:active {
+    background-color: #0a6a8c;
+}

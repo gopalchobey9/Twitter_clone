@@ -1,5 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useRef } from 'react'
+import "./PostPage.css"
+
 
 const PostPage = () => {
   const textDataRef =  useRef();
@@ -16,9 +18,9 @@ const PostPage = () => {
     }
   }
   return (
-    <div>
+    <div className='PostPage'>
         <form onSubmit={postdataHandler} >
-        <input type="text" placeholder='what Happeninng?' name='textdata' id='textdata' ref={textDataRef}  />
+        <textarea type="text" placeholder='what Happeninng?' name='textdata' id='textdata' ref={textDataRef}  />
         <br />
         <hr />
        <div> 

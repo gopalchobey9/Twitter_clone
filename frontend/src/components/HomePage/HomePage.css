@@ -1,3 +1,132 @@
+/* Styles for the homepage */
+/* .main-div{
+    background-color: bisque;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+} */
+
+.signin-heading {
+    /* Add your styles here */
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    /* animation-delay: 2s; Add a 2-second delay before the animation starts */
+    /* animation-iteration-count: 3; Repeat the animation 3 times */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    30%{
+        transform: translate(-50%);
+    }
+    60%{
+        transform: translate(50%);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 2.8);
+    border-radius: 10px;
+    padding: 10px;
+    
+    margin: auto; /* Add this line to center the homepage div */
+    
+    width: 50%;
+    margin-top: 20px;
+}
+    /* margin-top: 20px; */
+    /* Styles for other elements on the homepage */
+   
+    /* margin-bottom: 10vh;
+} */
+
+/* Styles for input in form */
+input {
+    width: 10rem;
+    border: 2px solid black;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin: 10px;
+}
+
+input:focus {
+    border-color: #1da1f2;
+}
+
+/* Styles for the "Sign in with Google" button */
+.signin-google-button {
+    /* Add your styles here */
+    padding: 10px 20px;
+    background-color: #37db68;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.signin-google-button:hover {
+    background-color: #c53929;
+}
+
+.signin-google-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(219, 68, 55, 0.3);
+}
+
+
+/* Styles for the sign-in section */
+.signin-section {
+    /* Add your styles here */
+    margin-bottom: 20px;
+}
+
+/* Styles for the sign-in form */
+.signin-form {
+    /* Add your styles here */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for the sign-in button */
+.signin-button {
+    /* Add your styles here */
+    padding: 10px 20px;
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+.signin-button:hover {
+    background-color: #4fd255;
+}
+
+/* Styles for other elements on the homepage */
+/* Add your styles here */
+
+/* 
+
 .Login-MainDiv{
     display: flex;
     flex-direction: column;
@@ -5,10 +134,10 @@
     align-items: center;
     justify-content: center;
     border: 2px  black solid;
-    /* height: 100vh; */
+   
     width: 40rem;
-    margin: auto; /* Center the div horizontally */
-    margin-top: 10vh; /* Adjust the top margin if needed */
+    margin: auto; 
+    margin-top: 10vh; /* Adjust the top margin if needed 
     margin-bottom: 10vh;
     padding: 2.5rem;
 
@@ -32,4 +161,4 @@ hr{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
+} */

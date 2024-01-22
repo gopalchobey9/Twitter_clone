@@ -1,9 +1,37 @@
-.option{
-    gap: 1rem;
-    margin: 2rem;
-    align-items: flex-start;
+/* Sidebar container */
+
+
+/* Sidebar option */
+.option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
-/* .option{
-    background-color: red;
-    max-width: 10rem;
-} */
+.option:hover {
+    background-color: #e8f5fe;
+    color: #1da1f2;
+}
+
+/* Sidebar option icon */
+.sidebar-option .icon {
+    margin-right: 10px;
+}
+
+/* Sidebar option label */
+.sidebar-option .label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Active sidebar option */
+.sidebar-option.active {
+    background-color: #1da1f2;
+    color: #fff;
+}
+
+/* Active sidebar option label */
+.sidebar-option.active .label {
+    color: #fff;
+}

@@ -1,13 +1,48 @@
-.feed-head{
+.feed-head {
     display: flex;
-
     gap: 3rem;
 }
-.feed-head > div{
+
+.feed-head > div {
     font-size: 2rem;
     border: 1.5px solid black;
-
 }
-.feed-post{
+
+.feed-post {
     border: 1.5px solid black;
 }
+
+.posts-section {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Add your custom styles for the feed portion here */
+.feed {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.feed .feed-head {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feed .feed-head > div {
+    border: none;
+}
+
+.feed .feed-post {
+    margin-top: 20px;
+}
+
+.feed .posts-section {
+    margin: 0;
+}
+

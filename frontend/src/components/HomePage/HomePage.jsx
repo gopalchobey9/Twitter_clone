@@ -44,21 +44,25 @@ const HomePage = () => {
     }
   }
   return (
-    <div className='Login-MainDiv'>
-      <h2>Sign in to X</h2>
-      <button>Sign in with Google</button>
-      <button>Sign in with Apple</button>
+    <div className='main-div'>
+      <div className='homepage'>
+      <h2 className='signin-heading'>Sign in to X</h2>
+      <button className='signin-google-button'>Sign in with Google</button>
+      <button className='signin-google-button'>Sign in with Apple</button>
       <hr />
       {/* <br /> */}
-     <form onSubmit={loginInfoHandler} className='form-c' >
+     <div className='signin-section'>
+     <form onSubmit={loginInfoHandler} className='signin-form' >
      <input type="text" placeholder='enter your email adress' name='username' id='username' ref={userRef} />
       <input type="text" placeholder='password' name='password' is='password' ref={passwordRef} />
-      <button>Login</button>
+      <button className='signin-button'>Login</button>
      </form>
+     </div>
      <span>Or</span>
-     <button onClick={homePageHandler}> next</button>
-      <button>Forgot Password</button>
+     <button onClick={homePageHandler} className='signin-button'> next</button>
+      <button className='signin-button`'>Forgot Password</button>
       <span>dont have account <Link to='/signup' >Signup</Link></span>
+    </div>
     </div>
   )
 }

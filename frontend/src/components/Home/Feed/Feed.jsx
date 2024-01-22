@@ -4,23 +4,20 @@ import PostPage from '../../Posts/PostPage/PostPage'
 import Posts from '../../Posts/Posts'
 const Feed = () => {
   return (
-    <div>
+    <div className='feed'>
       <div className='feed-head'>
         <div>For you</div>
         <div>Following</div>
       </div>
       <div className='feed-post'>
-        <div>
+        
           <img src="" alt="img" />
           <PostPage/>
-          <br />
-          <hr />
-          <div>
+    </div>
+          <div className='posts-section'>
             <Posts/>
           </div>
         </div>
-    </div>
-    </div>
   )
 }
 
