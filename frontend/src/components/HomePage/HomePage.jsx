@@ -25,7 +25,6 @@ const HomePage = () => {
 
         // { withCredentials: true }
       );
-
      
       if (response.data) {
         console.log(response.data.user.username);
@@ -60,8 +59,8 @@ const HomePage = () => {
      </div>
      <span>Or</span>
      <button onClick={homePageHandler} className='signin-button'> next</button>
-      <button className='signin-button`'>Forgot Password</button>
-      <span>dont have account <Link to='/signup' >Signup</Link></span>
+      <button className='signin-button'>Forgot Password</button>
+      <span>dont have account? <Link to='/signup' >SignUp</Link></span>
     </div>
     </div>
   )
