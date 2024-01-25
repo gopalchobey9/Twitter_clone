@@ -23,6 +23,10 @@
 .post-content {
     font-size: 14px;
     line-height: 1.5;
+    border: 2px solid black;
+    /* width: 100vw; */
+    width: 30rem;
+
 }
 
 .post-author {
@@ -30,3 +34,27 @@
     color: #888888;
     margin-top: 10px;
 }
+
+/* .post-div-perticular{
+    border: ;
+} */
+.text-data{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+.text-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+

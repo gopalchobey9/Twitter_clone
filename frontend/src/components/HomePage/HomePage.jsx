@@ -1,6 +1,6 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import "./HomePage.css"
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, json, useNavigate } from 'react-router-dom'
 import axios from "axios"
 import { AppContext } from '../../context/AppContext'
 
@@ -8,12 +8,20 @@ import { AppContext } from '../../context/AppContext'
 const HomePage = () => {
   let {userDetails,updateUserDetails}=useContext(AppContext);
 
+
   let navigate = useNavigate();
   const userRef= useRef();
   const passwordRef =useRef();
   function homePageHandler(){
     navigate('/home')
   }
+  useEffect(()=>{
+        const getusername = localStorage.getItem('username');
+        console.log(getusername);
+        updateUserDetails(getusername);
+
+  },[updateUserDetails])
+  
    const  loginInfoHandler= async (e)=>{
     e.preventDefault();
     const username=userRef.current.value;
@@ -28,12 +36,15 @@ const HomePage = () => {
      
       if (response.data) {
         console.log(response.data.user.username);
-        
+        const username = response.data.user.username;
         updateUserDetails(response.data.user.username)
+        localStorage.setItem('username', JSON.stringify(username));
+        console.log(userDetails);
         navigate('/home');
         
         
       } 
+      
       else {
         console.error(response.data.message);
       }

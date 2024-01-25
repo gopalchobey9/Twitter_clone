@@ -2,14 +2,16 @@ import React, { useContext } from 'react'
 import SidebarOption from './SidebarOption/SidebarOption'
 import "./Sidebar.css"
 import { AppContext } from '../../../context/AppContext'
-
-
-
+import { useNavigate } from 'react-router-dom'
 const Sidebar = () => {
+  let navigate = useNavigate();
   const {userDetails} = useContext(AppContext);
+  function moveToProfileHandler(){
+    navigate("/myprofile");
+  }
   return (
     <div className='sidebar'>
-     <span>
+     <span onClick={moveToProfileHandler} className='profile-name-sidebar'>
       Name:  {userDetails}
       </span>
       <SidebarOption name={"Home"}/>

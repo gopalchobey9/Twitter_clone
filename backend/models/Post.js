@@ -5,6 +5,12 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true
     }
+    ,
+    author:{
+        type:String,
+         
+    }, 
+
 });
 
 const Post = mongoose.model('Post', postSchema);
