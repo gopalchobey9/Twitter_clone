@@ -8,7 +8,7 @@ const UserSchema  = new  mongoose.Schema({
         unique: true
     },
     
-})
+},{timestamps:true})
 UserSchema.plugin(passportLocalMongoose);
 
 let User = mongoose.model('User', UserSchema);

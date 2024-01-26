@@ -24,7 +24,9 @@ router.get('/home', (req, res) => {
 
 router.post('/login', passport.authenticate('local', { 
 }), (req, res)=> {
-    res.status(200).json({ success: true, message: 'Login successful' ,user:req.user});
+  console.log(req.user.createdAt)
+  console.log(req.user.email)
+    res.status(200).json({ success: true, message: 'Login successful' ,user:req.user,joindate:req.user.createdAt });
 });
 // Export the router
 module.exports = router;

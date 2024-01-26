@@ -6,7 +6,7 @@ import { AppContext } from '../../context/AppContext'
 
 
 const HomePage = () => {
-  let {userDetails,updateUserDetails}=useContext(AppContext);
+  let {userDetails,updateUserDetails,essentialDetails,setEssentialDetails,email,updateEmail}=useContext(AppContext);
 
 
   let navigate = useNavigate();
@@ -15,6 +15,17 @@ const HomePage = () => {
   function homePageHandler(){
     navigate('/home')
   }
+//   function changeHandler(event) {
+//     setEssentialDetails([
+//         (prev) => [
+//             {
+//                 ...prev,
+//                 [event.target.name]: event.target.value,
+//             },
+//         ],
+//     ]);
+//     console.log(essentialDetails.username+" username");
+// }
   useEffect(()=>{
         const getusername = localStorage.getItem('username');
         console.log(getusername);
@@ -24,9 +35,12 @@ const HomePage = () => {
   
    const  loginInfoHandler= async (e)=>{
     e.preventDefault();
+
     const username=userRef.current.value;
     const password=passwordRef.current.value;
+   
     try {
+    
       const response = await axios.post(
         "http://localhost:8080/login",
         { username, password },
@@ -37,6 +51,12 @@ const HomePage = () => {
       if (response.data) {
         console.log(response.data.user.username);
         const username = response.data.user.username;
+        updateEmail(response.data.user.email);
+        const email = response.data.user.email;
+        updateEmail(email);
+        localStorage.setItem("email", email);
+        const createdAt = new Date(response.data.user.createdAt);
+        localStorage.setItem("createdAt", createdAt);
         updateUserDetails(response.data.user.username)
         localStorage.setItem('username', JSON.stringify(username));
         console.log(userDetails);
@@ -63,7 +83,13 @@ const HomePage = () => {
       {/* <br /> */}
      <div className='signin-section'>
      <form onSubmit={loginInfoHandler} className='signin-form' >
-     <input type="text" placeholder='username' name='username' id='username' ref={userRef} />
+     <input type="text"
+      placeholder='username'
+      name='username'
+      id='username'
+      ref={userRef}
+    
+    />
       <input type="text" placeholder='password' name='password' is='password' ref={passwordRef} />
       <button className='signin-button'>Login</button>
      </form>

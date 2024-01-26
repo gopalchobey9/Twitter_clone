@@ -1,10 +1,11 @@
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
 import "./Signup.css"
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
+import { AppContext } from '../../../context/AppContext'
 
 const Signup = () => {
-
+  let {email,updateEmail}=useContext(AppContext);
 
   // const [formdata,setFormData]=useState({
   //   email:"",
@@ -29,6 +30,8 @@ const Signup = () => {
     const email=emailRef.current.value;
     const username=usernameRef.current.value;
     const password=passwordRef.current.value;
+    updateEmail(email);
+    localStorage.setItem('email', email);
     const response = await axios.post("http://localhost:8080/signup",{email:email,username:username,password:password})
 
     if (response.data) {

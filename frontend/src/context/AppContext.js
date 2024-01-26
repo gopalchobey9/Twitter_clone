@@ -7,7 +7,12 @@ export const AppContext = createContext();
 export default function  AppContextProvider ({ children }){
     // State to store user details and essential details
     const [userDetails, setUserDetails] = useState("");
-    const [essentialDetails, setEssentialDetails] = useState(null);
+    const [email, setEmail] = useState()
+    // const [essentialDetails, setEssentialDetails] = useState({
+    //     username:"",
+    //     email:"",
+    //     createdAt:"",
+    // });
     const [isPosted, setIsPosted] = useState(false);
 
     // Function to update user details
@@ -16,6 +21,9 @@ export default function  AppContextProvider ({ children }){
     };
     const updateIsPosted =()=>{
         setIsPosted(!isPosted);
+    }
+    const updateEmail =(details)=>{
+        setEmail(email);
     }
 
     useEffect(()=>{
@@ -28,8 +36,10 @@ export default function  AppContextProvider ({ children }){
 
 
     // Function to update essential details
-    const updateEssentialDetails = (details) => {
-        setEssentialDetails(details);
+    const updateEssentialDetails = (event) => {
+        // setEssentialDetails([
+            
+        // ]);
 
     };
 
@@ -37,10 +47,13 @@ export default function  AppContextProvider ({ children }){
     const value = {
         userDetails,
         updateUserDetails,
-        essentialDetails,
+        // essentialDetails,
+        // setEssentialDetails,
         updateEssentialDetails,
         isPosted,
-        updateIsPosted
+        updateIsPosted,
+        email,
+        updateEmail,
     };
 
     return (
