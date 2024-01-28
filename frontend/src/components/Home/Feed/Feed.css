@@ -36,10 +36,14 @@
 
 .feed .feed-head > div {
     border: none;
+    font-weight: bold;
 }
 
 .feed .feed-post {
     margin-top: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
 }
 
 .feed .posts-section {

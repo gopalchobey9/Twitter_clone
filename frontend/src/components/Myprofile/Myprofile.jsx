@@ -24,10 +24,6 @@ const Myprofile = () => {
         <div>
           {createTime}
         </div>
-
-
-
-
     </div>
   )
 }
